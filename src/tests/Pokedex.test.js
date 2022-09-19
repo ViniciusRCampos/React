@@ -1,5 +1,5 @@
 import React from 'react';
-import { getAllByRole, getAllByTestId, screen } from '@testing-library/react';
+import { screen } from '@testing-library/react';
 // import userEvent from '@testing-library/user-event';
 import userEvent from '@testing-library/user-event';
 import renderWithRouter from '../renderWithRouter';
@@ -28,6 +28,6 @@ describe('Teste o componente <Pokedex.js />', () => {
     renderWithRouter(<App />);
     const buttonAll = screen.getByText(/all/i);
     expect(buttonAll).toBeInTheDocument();
-    userEvent.click(buttonAll)
+    userEvent.click(buttonAll);
   });
 });
